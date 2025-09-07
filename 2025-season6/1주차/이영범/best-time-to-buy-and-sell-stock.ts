@@ -58,7 +58,7 @@ function maxProfit1(prices: number[]): number {
 /*
     최적화 해법
     (prices.lenght를 n이라고 했을 때)
-    최종 시간복잡도 O(n)
+    최종 시간복잡도 O(n - 1) -> O(n)
     최종 공간복잡도: O(1) + O(1)
 */
 function maxProfit2(prices: number[]): number {
@@ -67,7 +67,7 @@ function maxProfit2(prices: number[]): number {
     let lowPrice: number = prices[0] // SC: O(n)
     let maxProfit: number = 0 // SC: O(n)
 
-    for (let i = 1; i < prices.length; i++) { // TC: O(n)
+    for (let i = 1; i < prices.length; i++) { // TC: O(n - 1)
         const currentPrice = prices[i]
         // 현재가격이 lowPrice보다 작으면 lowPrice 갱신
         if (currentPrice < lowPrice) { // 최소값 계산만 매번 수행하고 조건부로 최대값 갱신
