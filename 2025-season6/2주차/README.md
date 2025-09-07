@@ -20,11 +20,16 @@ for (let num of nums) { // TC: O(n)
 for (let num = 0; num < RANGE; num++) { // TC: O(20001)
 ```
 
-- 라인별로 기술된 시간복잡도를 최종적으로 가장 상단에 정리해 주세요
+- 라인별로 기술된 시간복잡도를 최종적으로 (함수별) 가장 상단의 주석에 정리해 주세요
 ```
-    (nums.length를 n이라고 했을 때)
+*
+    최적화 버젼: 값의 범위가 제한적이므로 배열을 생성하여 counting
+    (n은 nums.length라고 했을 때)
     전체 시간복잡도(Time Complexity): O(20001) + O(n) + O(20001) -> O(20001)은 O(n + 1)이므로 O(3n + 2) -> O(n)
     전체 공간복잡도(Space Complexity): O(1) + O(1) + O(20001) + O(1) -> O(n) -> O(2n + 4) -> O(n)
+*/
+function arrayPairSum2(nums: number[]): number {
+...
 ```
 
 - 공유드린 엑셀에 마지막 시간 복잡도를 정리해 주세요
