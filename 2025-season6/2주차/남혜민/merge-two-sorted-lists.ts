@@ -8,17 +8,16 @@ import { ListNode } from './list-node';
 // 시간 복잡도: O(n + m)
 // - n은 list1의 길이, m은 list2의 길이
 // - while 에서 각 반복마다 노드 하나씩 처리해서 총 n + m개 노드를 모두 처리
-// 공간 복잡도: O(1) - 새로운 노드를 생성하지 않고 기존 노드를 재사용
+// 공간 복잡도: O(1) - 더미 노드 1개만 생성하고 나머지는 기존 노드들의 연결만 변경
 function mergeTwoLists1(
     list1: ListNode | null,
     list2: ListNode | null
 ): ListNode | null {
-    // 0) 더미 노드 만들기
     const dummy = new ListNode(0);
     let current = dummy;
 
     while (list1 !== null && list2 !== null) {
-        // 1) 각 연결리스트 끼리 길이 비교
+        // 1) 각 연결리스트 끼리 값 비교
         // O(min(n, m)) - 둘 중 짧은 리스트까지 반복
 
         if (list1.val <= list2.val) {
