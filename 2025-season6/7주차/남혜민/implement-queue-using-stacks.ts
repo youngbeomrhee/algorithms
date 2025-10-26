@@ -8,11 +8,12 @@ class MyQueue {
         this.outStack = [];
     }
 
+    // 시간 복잡도: O(n)
     push(x: number): void {
         this.inStack.push(x);
     }
 
-    // 시간 복잡도: O(1) 최선, O(n) 최악
+    // 시간 복잡도: O(1) 평균, O(n) 최악
     pop(): number {
         if (this.outStack.length === 0) {
             // outStack이 비어있을 때 inStack의 모든 원소를 outStack으로 이동
@@ -23,7 +24,7 @@ class MyQueue {
         return this.outStack.pop();
     }
 
-    // 시간 복잡도: O(1) 최선, O(n) 최악
+    // 시간 복잡도: O(1) 평균, O(n) 최악
     peek(): number {
         // outStack이 비어있으면 inStack의 모든 원소를 outStack으로 이동
         if (this.outStack.length === 0) {

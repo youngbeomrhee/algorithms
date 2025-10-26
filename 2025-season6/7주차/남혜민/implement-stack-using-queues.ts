@@ -6,7 +6,7 @@ class MyStack {
         this.queue = [];
     }
 
-    // 시간 복잡도: O(n-1) - 새로운 원소를 맨 앞으로 이동시키기 위해 n번 shift/push
+    // 시간 복잡도: O(n) - 새로운 원소를 맨 앞으로 이동시키기 위해 n번 shift/push
     // 공간 복잡도: O(1) - 추가 공간 사용 x
     push(x: number): void {
         this.queue.push(x);

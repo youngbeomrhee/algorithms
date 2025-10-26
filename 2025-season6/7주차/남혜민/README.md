@@ -19,7 +19,7 @@
 -   **난이도**: Easy
 -   **요약**: 스택을 사용하여 FIFO(First In First Out) 큐를 구현하는 문제
 -   **핵심 아이디어**: 입력용 스택과 출력용 스택 두 개를 사용하여 FIFO 순서 유지
--   **시간복잡도**: push O(1), pop/peek O(1) amortized
+-   **시간복잡도**: push O(1), pop/peek O(1) amortized (평균)
 -   **공간복잡도**: O(n) - 두 스택에 최대 n개의 원소 저장
 
 ## 학습 포인트
@@ -35,5 +35,5 @@
 
 -   **두 스택 활용**: inStack(입력용), outStack(출력용)으로 역할 분리
 -   **Lazy Transfer**: outStack이 비어있을 때만 inStack에서 원소 이동
--   **Amortized O(1)**: 각 원소는 최대 2번(inStack→outStack, pop) 이동하므로 평균 O(1)
+-   **Amortized O(1)**: 각 원소는 최대 2번(inStack→outStack, pop) 이동하므로 평균 O(1), 최악은 O(n)
 -   **효율적 구현**: push는 항상 O(1), pop/peek은 평균 O(1)
